@@ -57,7 +57,7 @@ public:
 		numerator = numera;
 		numerator /= gcd(numera, denomi);
 		denominator /= gcd(numera, denomi);
-
+		if ((denominator < 0)) { denominator = -denominator; numerator = -numerator; }
 	}
 	int getNumerator()
 	{
