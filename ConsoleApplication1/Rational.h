@@ -63,11 +63,14 @@ public:
 		denominator /= gcd(numera, denomi);
 		if ((denominator < 0)) { denominator = -denominator; numerator = -numerator; }
 	}
+	int a = numerator;
+	int b = denominator;
+
 	int getNumerator()
 	{
-		return numerator;
+		return a;
 	}
-	int getDenominator() { return denominator; }
+	int getDenominator() { return b; }
 	Rational add(Rational secondRational)
 	{
 		int n1 = secondRational.getNumerator();

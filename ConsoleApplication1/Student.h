@@ -21,7 +21,7 @@ public:
 	Rational calculateGPA()
 	{
 		Rational numerator, denominator;
-		for (int i = 0; i < arrSize-1; i++)
+		for (int i = 0; i < arrSize; i++)
 		{
 			credit_Hours = new int();
 			int cH = credit_Hours[i];

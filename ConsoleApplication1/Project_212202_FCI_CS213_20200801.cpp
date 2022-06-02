@@ -28,7 +28,7 @@ int main()
 	}
 	for (int i = 0; i <n; i++)
 	{
-		cout <<endl<<endl<<endl<< BRUH[n].calculateGPA().toString();
+		cout <<endl<<endl<<endl<< BRUH[n].calculateGPA().doubleValue();
 		cout << BRUH[n];
 	}
 
