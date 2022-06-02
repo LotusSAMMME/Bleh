@@ -1,9 +1,9 @@
 using namespace std;
 #include "Rational.h"
-
+#include "Student.h"
 int main()
 {
-	Rational Rat = Rational(13, 23) + Rational(3, 13);
+	/*Rational Rat = Rational(13, 23) + Rational(3, 13);
 	Rational Rat2 = Rational(13, 23) - Rational(3, 13);
 	Rational Rat3 = Rational(13, 23) * Rational(3, 13);
 	Rational Rat4 = Rational(13, 23) / Rational(3, 13);
@@ -16,5 +16,7 @@ int main()
 	cout << Rat.toString();
 	cout << Rat2.toString();
 	cout << Rat3.toString();
-	cout << Rat4.toString();
+	cout << Rat4.toString();*/
+	cout << "TYPE IN THE NUMBER OF STUDENTS NOW." << endl;
+
 }
