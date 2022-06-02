@@ -12,7 +12,7 @@ using namespace std;
 #endif
 class Student
 {
-protected:
+private:
 	Rational* grades;
 	int* credit_Hours;
 	int arrSize;
