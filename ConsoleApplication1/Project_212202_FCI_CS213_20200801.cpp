@@ -20,14 +20,14 @@ int main()
 	cout << "TYPE IN THE NUMBER OF STUDENTS NOW." << endl;
 	int n;
 	cin >> n;
-	Student* BRUH;
-	for (int i = 0; i > n; i++)
+	Student* BRUH=nullptr;
+	for (int i = 0; i < n; i++)
 	{
 		cin >> BRUH[n];
 	}
-	for (int i = 0; i > n; i++)
+	for (int i = 0; i < n; i++)
 	{
-		cout << &BRUH[n].calculateGPA();
+		cout << BRUH[n].calculateGPA().toString();
 		cout << &BRUH[n];
 	}
 

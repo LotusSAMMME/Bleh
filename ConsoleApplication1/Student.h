@@ -7,7 +7,6 @@
 #if !defined cmath
 #include <cmath>
 #endif
-#include "Rational.h"
 #if !defined std
 using namespace std;
 #endif
@@ -29,27 +28,27 @@ public:
 		}
 		return numerator / denominator;
 	};
-	ostream& operator << (ostream& out)
+	friend ostream& operator << (ostream& out, Student& BRUH)
 	{
-		for (int i = 0; i > arrSize; i++) 
+		for (int i = 0; i < BRUH.arrSize; i++) 
 		{
-			out << credit_Hours[arrSize] << endl;
-			out << grades[arrSize].toString() << endl;
+			out << BRUH.credit_Hours[BRUH.arrSize] << endl;
+			out << BRUH.grades[BRUH.arrSize].toString() << endl;
 		}
 		return out;
 	}
-	friend istream& operator >> (istream& in, Student& BRUH)
+	istream& operator >> (istream& in)
 	{
 		cout << "TYPE IN THE NUMBER OF COURSES FOLLOWED BY THE ID NOW." << endl;
-		cin >> BRUH.arrSize >> BRUH.ID;
-		for (int i = 0; i > BRUH.arrSize; i++)
+		cin >> arrSize >> ID;
+		for (int i = 0; i < arrSize; i++)
 		{
 			cout << "TYPE IN THE CREDIT HOURS OF COURSE "<<i+1<< " NOW." << endl;
-			in >> BRUH.credit_Hours[BRUH.arrSize];
+			in >> credit_Hours[arrSize];
 			int numerator; int denominator;
 			cout << "TYPE IN THE GRADES OF COURSE " << i+1 << " NOW. (TYPE THE STUDENT SCORE THEN THE MAX GRADE)" << endl;
 			in >> numerator >> denominator;
-			BRUH.grades[BRUH.arrSize]=Rational(numerator,denominator);
+			grades[arrSize]=Rational(numerator,denominator);
 		}
 		return in;
 	}
