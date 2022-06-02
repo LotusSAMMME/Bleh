@@ -12,7 +12,7 @@ using namespace std;
 #endif
 class Student
 {
-private:
+protected:
 	Rational* grades;
 	int* credit_Hours;
 	int arrSize;
@@ -37,18 +37,18 @@ public:
 		}
 		return out;
 	}
-	istream& operator >> (istream& in)
+	friend istream& operator >> (istream& in, Student& BRUH)
 	{
 		cout << "TYPE IN THE NUMBER OF COURSES FOLLOWED BY THE ID NOW." << endl;
-		cin >> arrSize >> ID;
-		for (int i = 0; i < arrSize; i++)
+		cin >> BRUH.arrSize >> BRUH.ID;
+		for (int i = 0; i < BRUH.arrSize; i++)
 		{
 			cout << "TYPE IN THE CREDIT HOURS OF COURSE "<<i+1<< " NOW." << endl;
-			in >> credit_Hours[arrSize];
+			in >> BRUH.credit_Hours[BRUH.arrSize];
 			int numerator; int denominator;
 			cout << "TYPE IN THE GRADES OF COURSE " << i+1 << " NOW. (TYPE THE STUDENT SCORE THEN THE MAX GRADE)" << endl;
 			in >> numerator >> denominator;
-			grades[arrSize]=Rational(numerator,denominator);
+			BRUH.grades[BRUH.arrSize]=Rational(numerator,denominator);
 		}
 		return in;
 	}
