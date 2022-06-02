@@ -12,10 +12,14 @@
 class Rational
 {
 private:
-	int numerator;
-	int denominator;
+	int numerator=1;
+	int denominator=1;
 	int gcd(int n, int d)
 	{
+		if (n==d&&d==0)
+		{
+			return 1;
+		}else
 		if (n == 0)
 		{
 			return abs(d);
@@ -40,7 +44,7 @@ private:
 public:
 	Rational()
 	{
-		numerator = 0;
+		numerator = 1;
 		denominator = 1;
 	}
 	Rational(int numera, int denomi)

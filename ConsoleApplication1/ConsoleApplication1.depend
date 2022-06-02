@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1654201623 source:f:\documents\cprojects\cs213\bleh\consoleapplication1\project_212202_fci_cs213_20200801.cpp
+	"Rational.h"
+	"Student.h"
+
+1654201088 f:\documents\cprojects\cs213\bleh\consoleapplication1\rational.h
+	<iostream>
+	<string>
+	<cmath>
+
+1654201355 f:\documents\cprojects\cs213\bleh\consoleapplication1\student.h
+	<iostream>
+	<string>
+	<cmath>
+

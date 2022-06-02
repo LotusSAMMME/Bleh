@@ -3,7 +3,7 @@ using namespace std;
 #include "Student.h"
 int main()
 {
-	/*Rational Rat = Rational(13, 23) + Rational(3, 13);
+	Rational Rat = Rational(13, 23) + Rational(3, 13);
 	Rational Rat2 = Rational(13, 23) - Rational(3, 13);
 	Rational Rat3 = Rational(13, 23) * Rational(3, 13);
 	Rational Rat4 = Rational(13, 23) / Rational(3, 13);
@@ -16,19 +16,20 @@ int main()
 	cout << Rat.toString();
 	cout << Rat2.toString();
 	cout << Rat3.toString();
-	cout << Rat4.toString();*/
+	cout << Rat4.toString();
 	cout << "TYPE IN THE NUMBER OF STUDENTS NOW." << endl;
 	int n;
 	cin >> n;
-	Student* BRUH=nullptr;
+	Student* BRUH = new Student();
 	for (int i = 0; i < n; i++)
 	{
-		cin >> BRUH[n];
+		BRUH[i] = Student();
+		cin >> BRUH[i];
 	}
-	for (int i = 0; i < n; i++)
+	for (int i = 0; i <n; i++)
 	{
-		cout << BRUH[n].calculateGPA().toString();
-		cout << &BRUH[n];
+		cout <<endl<<endl<<endl<< BRUH[n].calculateGPA().toString();
+		cout << BRUH[n];
 	}
 
 }
