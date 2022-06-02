@@ -7,9 +7,7 @@
 #if !defined cmath
 #include <cmath>
 #endif
-#if !defined Rational
 #include "Rational.h"
-#endif
 #if !defined std
 using namespace std;
 #endif
@@ -23,7 +21,13 @@ private:
 public:
 	Rational calculateGPA() 
 	{
-		return Rational();
+		Rational numerator,denominator;
+		for (int i = 0; i < arrSize; i++)
+		{
+			numerator = numerator + Rational(grades[i] * Rational(credit_Hours[i],1));
+			denominator = denominator + Rational(credit_Hours[i], 1);
+		}
+		return numerator / denominator;
 	};
 	ostream& operator << (ostream& out)
 	{
@@ -34,18 +38,18 @@ public:
 		}
 		return out;
 	}
-	istream& operator >> (istream& in)
+	friend istream& operator >> (istream& in, Student& BRUH)
 	{
 		cout << "TYPE IN THE NUMBER OF COURSES FOLLOWED BY THE ID NOW." << endl;
-		cin >> arrSize >> ID;
-		for (int i = 0; i > arrSize; i++)
+		cin >> BRUH.arrSize >> BRUH.ID;
+		for (int i = 0; i > BRUH.arrSize; i++)
 		{
 			cout << "TYPE IN THE CREDIT HOURS OF COURSE "<<i+1<< " NOW." << endl;
-			in >> credit_Hours[arrSize];
+			in >> BRUH.credit_Hours[BRUH.arrSize];
 			int numerator; int denominator;
 			cout << "TYPE IN THE GRADES OF COURSE " << i+1 << " NOW. (TYPE THE STUDENT SCORE THEN THE MAX GRADE)" << endl;
 			in >> numerator >> denominator;
-			grades[arrSize]=Rational(numerator,denominator);
+			BRUH.grades[BRUH.arrSize]=Rational(numerator,denominator);
 		}
 		return in;
 	}

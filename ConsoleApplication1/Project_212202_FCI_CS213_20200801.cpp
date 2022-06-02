@@ -18,5 +18,17 @@ int main()
 	cout << Rat3.toString();
 	cout << Rat4.toString();*/
 	cout << "TYPE IN THE NUMBER OF STUDENTS NOW." << endl;
+	int n;
+	cin >> n;
+	Student* BRUH;
+	for (int i = 0; i > n; i++)
+	{
+		cin >> BRUH[n];
+	}
+	for (int i = 0; i > n; i++)
+	{
+		cout << &BRUH[n].calculateGPA();
+		cout << &BRUH[n];
+	}
 
 }
