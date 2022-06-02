@@ -20,7 +20,7 @@ int main()
 	cout << "TYPE IN THE NUMBER OF STUDENTS NOW." << endl;
 	int n;
 	cin >> n;
-	Student* BRUH = new Student();
+	Student* BRUH = new Student;
 	for (int i = 0; i < n; i++)
 	{
 		BRUH[i] = Student();

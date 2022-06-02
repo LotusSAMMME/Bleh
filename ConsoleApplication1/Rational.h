@@ -11,10 +11,10 @@
 
 class Rational
 {
-private:
-	int numerator=1;
+protected: int numerator=1;
 	int denominator=1;
-	int gcd(int n, int d)
+	private:
+int gcd(int n, int d)
 	{
 		if (n==d&&d==0)
 		{
@@ -63,14 +63,12 @@ public:
 		denominator /= gcd(numera, denomi);
 		if ((denominator < 0)) { denominator = -denominator; numerator = -numerator; }
 	}
-	int a = numerator;
-	int b = denominator;
 
 	int getNumerator()
 	{
-		return a;
+		return this->numerator;
 	}
-	int getDenominator() { return b; }
+	int getDenominator() { return this->denominator; }
 	Rational add(Rational secondRational)
 	{
 		int n1 = secondRational.getNumerator();
