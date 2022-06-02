@@ -23,7 +23,7 @@ public:
 		Rational numerator = Rational(0, 1);Rational denominator = Rational(0, 1);
 		for (int i = 0; i < arrSize; i++)
 		{
-			numerator = numerator + Rational(grades[i].getNumerator() * credit_Hours[i], grades[i].getDenominator());
+			numerator = numerator + (Rational(credit_Hours[i],1)*grades[i]);
 			denominator = denominator + Rational(credit_Hours[i], 1);
 			//cout <<endl<< (numerator / denominator).getNumerator()<< endl<< (numerator / denominator).getDenominator() << endl;
 		}
@@ -33,11 +33,11 @@ public:
 	{
 		for (int i = 0; i < BRUH.arrSize; i++)
 		{
-			out << endl<<BRUH.credit_Hours[i] << endl;
-			out << BRUH.grades[i].toString() << endl;
+			out << endl << "CREDIT HOUR(S) OF COURSE" << i + 1 << ": " <<BRUH.credit_Hours[i] << endl;
+			out << "GRADE OF COURSE"<<i+1<<": " << BRUH.grades[i].toString() << endl;
 		}
-		out << BRUH.calculateGPA().doubleValue()<<endl;
-		out << BRUH.ID << endl;
+		out << "GPA: " << BRUH.calculateGPA().toString() << endl;
+		out << "ID: " <<string(BRUH.ID) << endl;
 
 		return out;
 	}
@@ -51,13 +51,11 @@ istream& operator>> (istream& in, Student& s)
 	// Rational grades[10];
 	cout << "TYPE IN THE NUMBER OF COURSES FOLLOWED BY THE ID NOW." << endl;
 	int arrayS =1;
-	int id = 1;
-	cin >> arrayS >> id;
-	s.ID = id;
+	cin >> arrayS;
+	cin>>s.ID;
 	s.arrSize = arrayS;
-	cout << "done1";
 	int* credit_Hours = new int(0);
-	Rational* grades = new Rational();
+	Rational* grades = new Rational(0,1);
 	s.grades = grades;
 	for (int i = 0; i < s.arrSize; i++)
 	{

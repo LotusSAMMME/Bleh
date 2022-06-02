@@ -136,7 +136,7 @@ public:
 	Rational operator +(Rational right) { return add(right); }
 	Rational operator -(Rational right) { return subtract(right); }
 	int intValue() { return int(round(numerator / denominator)); }
-	double doubleValue() { return (numerator / denominator); }
+	double doubleValue() { return double(double(numerator) / double(denominator)); }
 	string toString() { if (denominator != 1) 
 	{ return to_string(numerator) + "/" + to_string(denominator) + "\n"; } 
 	return to_string(numerator) + "\n"; }
