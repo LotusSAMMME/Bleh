@@ -19,12 +19,13 @@ private:
 	string ID;
 public:
 	Rational calculateGPA()
-	{
+	{grades = new Rational();credit_Hours = new int();
 		Rational numerator, denominator;
 		for (int i = 0; i < arrSize-1; i++)
 		{
-			credit_Hours = new int();
+			
 			int cH = credit_Hours[i];
+			
 			numerator = numerator + Rational(grades[i] * Rational(cH, 1));
 			denominator = denominator + Rational(credit_Hours[i], 1);
 		}
