@@ -66,9 +66,9 @@ public:
 
 	int getNumerator()
 	{
-		return this->numerator;
+		return numerator;
 	}
-	int getDenominator() { return this->denominator; }
+	int getDenominator() { return denominator; }
 	Rational add(Rational secondRational)
 	{
 		int n1 = secondRational.getNumerator();
@@ -137,5 +137,7 @@ public:
 	Rational operator -(Rational right) { return subtract(right); }
 	int intValue() { return int(round(numerator / denominator)); }
 	double doubleValue() { return (numerator / denominator); }
-	string toString() { if (denominator != 1) { return to_string(numerator) + "/" + to_string(denominator) + "\n"; } else return to_string(numerator) + "\n"; }
+	string toString() { if (denominator != 1) 
+	{ return to_string(numerator) + "/" + to_string(denominator) + "\n"; } 
+	return to_string(numerator) + "\n"; }
 };
