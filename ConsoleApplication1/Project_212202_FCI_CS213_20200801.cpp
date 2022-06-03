@@ -32,4 +32,5 @@ int main()
 		cout << BRUH[i];
 	}
 	goto Giza;
+	//OK
 }
