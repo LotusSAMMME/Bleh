@@ -17,19 +17,24 @@ int main()
 	cout << Rat2.toString();
 	cout << Rat3.toString();
 	cout << Rat4.toString();*/
-	Giza:
-	cout << endl<<"TYPE IN THE NUMBER OF STUDENTS NOW." << endl;
 	int n;
-	cin >> n;
-	Student* BRUH = new Student[n];
-	for (int i = 0; i < n; i++)
-	{
-		BRUH[i] = Student();
-		cin >> BRUH[i];
-	}
-	for (int i = 0; i <n; i++)
-	{
-		cout << BRUH[i];
+
+	Student* BRUH = new Student;
+Giza:
+	
+	cout << endl<<"TYPE IN THE NUMBER OF STUDENTS NOW." << endl;
+	cin >> n;  
+	BRUH= new Student[n];
+	{		for (int i = 0; i < n; i++)
+		{
+			cout << "\nSTUDENT " << i + 1 << ":\n";
+			cin >> BRUH[i];
+		}
+		for (int i = 0; i < n; i++)
+		{
+			cout << "\nSTUDENT " << i + 1 << ":\n";
+			cout << BRUH[i];
+		}
 	}
 	goto Giza;
 	//OK
